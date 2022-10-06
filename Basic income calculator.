@@ -1,0 +1,77 @@
+// The following program will calculate and display the user's 
+// taxed income.
+
+#include <iostream> 								// For using cout and cin.
+#include <iomanip> 									// For changing and fixing the output.
+using namespace std;
+
+int main ()
+{
+
+			// Declaring integer and double variables.
+			int hours, otHours;
+			double payrate, totalIncome, taxedIncome, aftaxIncome, otRate;
+
+			// Declaring constant variables
+			const double MIN_INCOME = 0.12876							// For minimum income threshold
+			const double MID_INCOME = 0.15786							// For medium income threshold
+			const double HIGH_INCOME = 0.25924						// For High income threshold
+			const double PREMIUM INCOME = 0.45925					// For top 1%
+			
+			// Gathering income related input from user.
+			cout << "Please enter the number of hours worked this week. \n"
+			cin >> hours;
+			
+			cout << "Please enter your hourly payrate. \n"
+			cin << payrate;
+			
+			// Determining if the user is eligible to overtime.
+			if (hours > 40)
+					{
+						overTime = true;
+						otHours = hours - 40;
+						otRate = payrate * 2;
+					}
+					
+			// Calculate user's total income and display it.
+			if (overtime = true)
+				{
+				totalIncome = (hours * payrate) + (otHours * otRate);
+				}
+			
+			// Continue operation with normal variables.
+			else
+				totalIncome = hours * payrate;
+				
+			cout << fixed << showpoint << setprecision (2);
+			cout << "Your total income before tax is $ << totalIncome << "!\n";
+			
+			// Allocate user in income bracket.
+			if (totalIncome <= 860.75)
+				taxedIncome = totalIncome * MIN_INCOME;
+			
+			else (totalIncome <= 1252.01)
+				taxedIncome = totalIncome * MID_INCOME;
+				
+			else (totalIncome <= 1520.02)
+				taxedIncome = totalIncome * HIGH_INCOME;
+				
+			else (totalIncome > 1520.02)
+				taxedIncome = totalIncome * PREMIUM_INCOME;
+				
+			// Display the income to be taxed according to the user's
+			// tax threshold.
+			
+		cout << "The income to be taxed according to your data is $ " << taxedIncome << endl;
+		
+		// Calculate total income after tax and display it.
+		aftaxIncome = totalIncome - taxedIncome;
+		
+		cout << "Your total income after tax is $" << aftaxIncome << "! \n";
+		
+		
+			
+			
+	
+			
+		
